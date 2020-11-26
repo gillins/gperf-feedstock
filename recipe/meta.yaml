@@ -18,7 +18,8 @@ requirements:
     - {{ compiler('cxx') }}
     - make  # [not win]
     - m2-make  # [win]
-    - m2-bash  # [win]
+    - m2-base  # [win]
+    - m2-diffutils  # [win]
   host:
     - sed  # [osx]
 
