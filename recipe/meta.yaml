@@ -10,14 +10,15 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
-  skip: True  # [win]
+  number: 1
 
 requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - make
+    - make  # [not win]
+    - m2-make  # [win]
+    - m2-bash  # [win]
   host:
     - sed  # [osx]
 
